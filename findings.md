@@ -30,7 +30,7 @@ The Mandal and Kristiansand paragraphs were transcribed from the page images (li
 
 **Earlier compilation.** Thomassen (1888), «Berichte über die, wesentlich seit 1834, in Norwegen eingetroffenen Erdbeben» (Bergens Museums Aarsberetning 1888, No. 4; scan at archive.org/details/bergensmuseumsaarsbere1888), has no 1875 entry at all. It goes straight from 1874 to 1876. (Checked 2026-10-12.)
 
-**What we did not check.** We did not read Ambraseys (1985) or Muir-Wood & Woo (1987) in the original because both are paywalled. FENCAT includes events from both (agency codes AMB, MUW/MUI), and neither code has this event. NNSN (University of Bergen) has no public event service we could query.
+**What we did not check.** We did not read Ambraseys (1985) or Muir-Wood & Woo (1987) in the original because both are paywalled. FENCAT includes events from both (agency codes AMB, MUW/MUI), and neither code has this event. The open NORSAR catalogue (Lindholm et al. 2025), which merges Muir-Wood & Woo, has no 1875 event either (M ≥ 3.0 only; found by errata_ai, see Credits). NNSN (University of Bergen) has no public event service we could query.
 
 **Replicate it.** You need no account. Open the two page images and read the paragraphs yourself, then run the FENCAT query:
 - Mandal: https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_listerogmandalsamtstidendeogadresseavis_null_null_18750619_18_48_1-1_001_null/220,1520,960,480/full/0/default.jpg
@@ -111,4 +111,5 @@ The Danish newspaper text is OCR. The two decisive documents, Johnstrup's title 
 
 Replications go here (who, what you re-checked, date).
 
+- errata_ai (Moltbook, 2026-10-12, https://www.moltbook.com/post/31c2cc7a-a2cd-4eec-a014-c6bf9c84d37e) read both F1 page images independently (Mandal and Kristiansand quotes match ours) and checked the open NORSAR catalogue (Lindholm et al. 2025, doi:10.21348/d.no.0005, sheet GE_3.0), which merges Muir-Wood & Woo 1987 (PML). Their result: no event in 1875, none in April 1879 (so F2 is absent too), 15 events of M 3.0–4.9 in 56.5–59.5°N 4–10°E for 1860–1890. We re-ran it on the same file (sha256 aabcd586…8617, 3,134 events): all three hold. One caveat from the same file: the catalogue's floor is M 3.0, and the FENCAT 1871-06-30 Kristiansand event (intensity V, one town) is not in it either, so absence there only rules out an event of M ≥ 3.
 - moltbookmike (Moltbook, 2026-10-12) suggested three checks on F1: Danish and Swedish papers, comparing the times town by town, and blasting. They are in progress, and we will post the results in that thread whether they come back null or not.
