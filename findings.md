@@ -2,7 +2,7 @@
 
 An AI agent (Pico, operated by Håkon Åmdal) read 19th-century Norwegian newspapers from the National Library of Norway (nb.no), and later Danish papers from the Royal Danish Library (Mediestream), and compared every local earthquake report with FENCAT, the Fennoscandian earthquake catalogue (University of Helsinki).
 
-F1 and F2 are earthquakes missing from FENCAT. F3 is an earthquake FENCAT has, but under the wrong date.
+F1, F2 and F4 are earthquakes missing from FENCAT. F3 is an earthquake FENCAT has, but under the wrong date. F4 came from Swedish papers (National Library of Sweden, tidningar.kb.se).
 
 ## F1: 19 June 1875, about 05:30 local time, southern Norway coast. Not in FENCAT.
 
@@ -93,9 +93,40 @@ The times agree to within about 15 minutes: Maridalen 14:40, Kongsberg 14:50–1
 
 The Danish newspaper text is OCR. The two decisive documents, Johnstrup's title page and Lehmann's table, were read on the page images.
 
+## F4: 27 April 1875, 09:17 local time, Karlstad and Värmland (Sweden). Not in FENCAT.
+
+**What happened.** On Tuesday morning 27 April 1875 a shock was felt in Karlstad, together with "a strong rumble", for at least five seconds. The houses shook. Over the next days the Karlstad papers and a Kristinehamn paper printed reports from parishes on both sides of the town:
+
+| Place | Paper (date) | What it says (transcribed from the page image) |
+|---|---|---|
+| Karlstad, Haga | Nya Wermlandstidningen (1875-04-28, p. 2) | «I går kl. 9,17 f. m. förmärktes i stadsdelen Haga en jordstöt, gående i riktning från söder till norr, åtföljd af ett starkt dån, under en tid af minst 5 sekunder. Stöten var så stark att byggnaderna i närheten skakades.» |
+| Stavnäs, west of Karlstad | Wermlands Läns Tidning (1875-05-01, p. 2), letter dated Stavnäs 28 April | «I går den 27 dennes kändes här ett ganska starkt jordskalf, åtföljdt af ett dån, såsom vid häftig åska. Skalfwet, hwilket wäckte stor rädsla hos många, tycktes komma från wester och fortsätta åt öster.» The paper adds that it was also felt «Äfwen från Eds socken och flera andra ställen har jordskalfwet förnummits». |
+| Olme, east of Karlstad | Christinehamns Allehanda (1875-05-01, p. 3) | After the Karlstad report: «Samma jordstöt förnams äfwen inom Olme socken såwäl norra som mellersta del.» |
+| Segerstad, Kil, Grava, Alster, Nyed, Stavnäs | Nya Wermlandstidningen, as quoted in Lidköpings Tidning (1875-05-08) and Motala Tidning (1875-05-07) | The shock "seems to have had a rather large extent": besides Herrhagen and Qvarnberget in town, it was felt in these six parishes. (OCR only; we have not seen the N.W.T. page itself.) |
+
+Wermlands Läns Tidning (1875-04-28) has its own Karlstad report (OCR): «mellan kl. 9–10 en ganska stark jordstöt», houses trembled and loose objects moved. Dozens of Swedish papers reprinted the Karlstad reports, and we did not count those as sources.
+
+**What the catalogue has.** Nothing for this event:
+- FENCAT live search, run 2026-10-12, for 1875-03-01 to 1875-06-30 within 400 km of 59.4°N 13.5°E: 0 events. For the whole of 1875 the same search returns one event, GUW 1875-12-22 in Bohuslän. That one is the control: same year, same region, and the search finds it.
+- FENCAT file of 2020-02-28: it has two rows in all of 1875 (LEH 0813, which is F3, and GUW 1222). No row dated 26–28 April in any year at 57.8–60.2°N 11.5–15°E, so this is not a date slip of a known event.
+- One row we cannot rule out: `TOW?1878 59.0 13.5 III`, a row with an uncertain year and no month or day. The open Swedish newspaper text stops in 1876, so we could not check 1878.
+
+**Other explanations we checked.** A frost quake does not fit: the Stockholm daily mean on 27 April 1875 was +7.4 °C (Bolin Centre series), it happened at 09:17 in the morning, and it was felt in parishes on both sides of Karlstad. We found no explosion in the reports. The Danish papers that first pointed us to this event dated it 4 May. That is when they printed it. The Swedish papers give Tuesday 27 April.
+
+**What we did not check.** The Swedish historical catalogues FENCAT draws on, in the original. The N.W.T. page with the parish list (we have it through two reprints).
+
+**Replicate it.**
+- Karlstad (N.W.T.): https://data.kb.se/iiif/3/dark-7706176%2Fbib15760600_18750428_146401_34_0002.jp2/1967,213,826,3887/max/0/default.jpg
+- Stavnäs (W.L.T.): https://data.kb.se/iiif/3/dark-6516294%2Fbib11653832_18750501_146978_35_0002.jp2/1973,247,811,3032/max/0/default.jpg
+- Olme (Christinehamns Allehanda): https://data.kb.se/iiif/3/dark-12057650%2Fbibhrtpwhl9fdhf969p_18750501_155428_35_0003.jp2/141,69,770,4597/max/0/default.jpg
+- FENCAT: `bun fencat-live.ts 1875-03-01 1875-06-30 59.4 13.5 400`
+- Swedish papers: `bun kb-se.ts jordstöt 1875-04-27 1875-05-25` (data.kb.se, open, no key)
+
 ## Scorecard (honest false-positive count)
 
-- Candidates logged: **22**. Verified: **2** missing events (F1, F2) and **1** catalogue date error (F3).
+- Candidates logged: **26**. Verified: **3** missing events (F1, F2, F4) and **1** catalogue date error (F3).
+- C023, Skara and Skövde, Friday 19 February 1875 just after 21:00: two independent local papers (Skara Tidning 24 February, Sköfde Tidning 3 March, both read on the page image). In Skara doors sprang open and things fell off the walls; in Skövde, Nya Lerdala and at Mösseberg people felt a lighter shock and an underground rumble at the same time. Not in FENCAT. But it came after a sharp cold snap (the Stockholm daily mean dropped from −1.6 °C on 17 February to −9.6 °C on the 19th), so, as with C002, a frost quake is not ruled out. **Not verified, not rejected.**
+- C025, Årjäng, 6 February 1875, and C026, Åmål, Tuesday 7 July 1874 at about 10:00: one source each. C026 may be the date of FENCAT's year-only row `SVW 1874 08 58.9 12.6 V`. Open.
 - C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it. The weather argues for a frost quake: the Kristiansand paper of 4 January 1841 reports eight days of hard frost, and the Stockholm daily series (Bolin Centre) stays between −3 and −7 °C from 25 December to 6 January. Swedish papers only reprint the Arendal report. **Not verified, not rejected.**
 - C003–C006, C008, C010, C011: one source each. Open. C008 (Drammen and Skoger, morning of 1 October 1849) at first looked like a Kristiania report. The page image shows the Kristiania paper credits Drammens Tidende, so it is one source.
 - C009, Nesna/Hemnes 1857: a correspondent's list of dated shocks. FENCAT has the Nesna swarm of 1819–1829 but nothing from 1857. There is one source, so it stays open.
