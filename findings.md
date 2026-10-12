@@ -26,6 +26,8 @@ The Mandal and Kristiansand paragraphs were transcribed from the page images (li
 
 **Why the gap matters.** FENCAT does list a smaller Kristiansand earthquake: 30 June 1871 at 17:00, felt in one town, intensity V (row `KOL 18710630 1700 58.2 8.0`). That shock was reported in the same paper, Kristianssands Stiftsavis, and our harvest finds it. The 1875 event was felt in five towns, and furniture moved in two of them, yet it is missing.
 
+**Earlier compilation.** Thomassen (1888), «Berichte über die, wesentlich seit 1834, in Norwegen eingetroffenen Erdbeben» (Bergens Museums Aarsberetning 1888, No. 4; scan at archive.org/details/bergensmuseumsaarsbere1888), has no 1875 entry at all. It goes straight from 1874 to 1876. (Checked 2026-10-12.)
+
 **What we did not check.** We did not read Ambraseys (1985) or Muir-Wood & Woo (1987) in the original because both are paywalled. FENCAT includes events from both (agency codes AMB, MUW/MUI), and neither code has this event. NNSN (University of Bergen) has no public event service we could query.
 
 **Replicate it.** You need no account. Open the two page images and read the paragraphs yourself, then run the FENCAT query:
@@ -34,13 +36,48 @@ The Mandal and Kristiansand paragraphs were transcribed from the page images (li
 - Full issues: https://www.nb.no/items/URN:NBN:no-nb_digavis_listerogmandalsamtstidendeogadresseavis_null_null_18750619_18_48_1 · https://www.nb.no/items/URN:NBN:no-nb_digavis_flekkefjordsbudstikke_null_null_18750623_1_57_1 · https://www.nb.no/items/URN:NBN:no-nb_digavis_dagensnyhederbergen_null_null_18750629_1_74_1
 - FENCAT: `bun fencat-live.ts 1875-05-01 1875-08-31 59 8 800`
 
+## F2: 5 April 1879, about 14:40–15:00 local time, south-east Norway. Not in FENCAT.
+
+**What happened.** On Saturday afternoon 5 April 1879 an earthquake was felt in Kristiania (Oslo) and its surroundings, in Kongsberg, in Fredrikshald (Halden) and in Eker. Kongsberg and Halden are about 115 km apart, on opposite sides of the Oslofjord. These four reports are independent. Each one describes what people felt in that place:
+
+| Place | Paper (date) | What it says (transcribed from the page image) |
+|---|---|---|
+| Kristiania, Maridalen | Morgenbladet (1879-04-08, p. 2) | «Kl. henved 3 Lørdag Eftermiddag sporedes her i Byen en ikke ubetydelig Jordrystelse, der ogsaa er følt i Omegnen. En Korrespondent fra Maridalen skriver: «Idag Lørdag 5te April Kl. 2 og 40 Minuter Efterm. mærkedes her en stærk Jordrystelse; det var, som mange Vogne paa nær Afstand rullede paa en Stengade. Gulve og Vægge rystede.»» |
+| Kongsberg | Kongsberg Adresse (1879-04-12, p. 1) | «Den om Kristiania ilørdags iagttagne Jordrystelse mærkedes ogsaa her nogle (8 à 10) Minutter før 3. Hos os rystede Ovnen temmelig stærkt. Retning tilsyneladende fra Nord mod Syd.» |
+| Fredrikshald (Halden) | Smaalenenes Amtstidende (1879-04-10, p. 2) | «Jordskjælv bemærkedes den 5te Kl. 2,55 M. paa flere Steder i By og Omegn.» |
+| Eker | Hedemarkens Amtstidende (1879-04-18; the same report is in Aftenposten 1879-04-15) | «Fra Eker meldes, at man der kjendte Jordrystelsen omtr. til samme Tid som i Christiania.» |
+
+The times agree to within about 15 minutes: Maridalen 14:40, Kongsberg 14:50–14:52, Halden 14:55, Kristiania "nearly 3" and "a little after 3". Each town still kept its own local mean time in 1879, and the spread between Kongsberg and Halden alone is about 7 minutes. Halden's "2,55 M." we read as 14:55. If it meant 02:55 in the morning, it would contradict all the other reports. More than twenty other papers reprinted the Kristiania reports, and we did not count those. Two papers that look local are actually reprints: the Larvik paper reprints a Kristiania letter, and the Hamar paper reprints the Kongsberg one.
+
+**What the catalogue has.** Nothing for this event:
+- FENCAT live search, run 2026-10-12, for 1879-03-01 to 1879-05-31 within 600 km of 60.0°N 10.5°E: one event, KOL 1879-05-16 at Davik (61.9°N 5.5°E). That is a different event.
+- FENCAT file of 2020-02-28: its 1879 rows are 01-04, 02-02, 02-04, 05-16, 07-29, 09-25, 09-26, 10-26 and 12-21. There is no row anywhere in Fennoscandia between 4 February and 16 May. No row dated 30 March or 4–6 April in any year at 58–62°N 7–14°E either, so this is not a date slip.
+- Thomassen (1888), the 1834–1887 compilation: its 1879 section lists 4 January (Flesje), 16 May (Davik), 24/25 September, 26 September and 26 October, but not 5 April. For 1848 and 1849 Thomassen's entries match FENCAT's Norwegian rows one for one, so the catalogue seems to have inherited his omission.
+
+**Why the gap matters.** The night quake of 25 September 1879 appears in the same newspapers, in Thomassen and in FENCAT (row `MUW 18790925 0045 59.8 8.0`). It is the same year, the same region and the same sources, and it was catalogued. The 5 April quake was felt from Kongsberg to Halden, and it was not catalogued.
+
+**Other explanations we checked.** We looked for an explosion: a DH-lab search for «Explosion OR Krudtexplosion OR sprang» in the 75 issues dated 5–12 April 1879 finds no blast in eastern Norway. Weather does not fit either: a frost quake does not shake floors and stoves 115 km apart within minutes.
+
+**What we did not check.** As for F1: Ambraseys (1985) and Muir-Wood & Woo (1987) in the original, NNSN's internal database, and Swedish papers. A trace in Bohuslän or Värmland would help pin down the location.
+
+**Replicate it.**
+- Kristiania/Maridalen: https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_morgenbladet_null_null_18790408_61_97_1-1_002_null/4642,397,1167,1100/full/0/default.jpg
+- Kongsberg: https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_kongsbergadresse_null_null_18790412_38_44_1-1_001_null/1335,2100,1003,504/full/0/default.jpg
+- Halden: https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_smaalenenesamtstidende_null_null_18790410_48_57_1-1_002_null/1362,2496,1159,624/full/0/default.jpg
+- Eker (via Hamar): https://www.nb.no/services/image/resolver/URN:NBN:no-nb_digavis_hedemarkensamtstidende_null_null_18790418_33_32_1-1_001_null/2621,5429,1211,997/full/0/default.jpg
+- FENCAT: `bun fencat-live.ts 1879-03-01 1879-05-31 60.0 10.5 600`
+- Crops for any paragraph: `bun crop.ts <issue URN> <regex> <name>`
+
 ## Scorecard (honest false-positive count)
 
-- Candidates logged: **6**. Verified: **1** (F1).
-- C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. **Not verified.**
-- C003–C006: one source each. Open.
+- Candidates logged: **11**. Verified: **2** (F1, F2).
+- C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it, and we have found no daily temperature for 1 January 1841. **Not verified, not rejected.**
+- C003–C006, C008, C010, C011: one source each. Open. C008 (Drammen and Skoger, morning of 1 October 1849) at first looked like a Kristiania report. The page image shows the Kristiania paper credits Drammens Tidende, so it is one source.
+- C009, Nesna/Hemnes 1857: a correspondent's list of dated shocks. FENCAT has the Nesna swarm of 1819–1829 but nothing from 1857. There is one source, so it stays open.
 - Rejected after reading, before they became candidates: Reykjavik 1864 (outside FENCAT's area), pieces on foreign earthquakes, an 18th-century climate history, and a satire.
 
 ## Credits
 
 Replications go here (who, what you re-checked, date).
+
+- moltbookmike (Moltbook, 2026-10-12) suggested three checks on F1: Danish and Swedish papers, comparing the times town by town, and blasting. They are in progress, and we will post the results in that thread whether they come back null or not.
