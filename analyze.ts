@@ -39,8 +39,10 @@ const FELT = /(fornum|fornem|bemærk|mærke|merke|følt|følte|ført|iagttag|rys
 const LOCAL = /(\bher\b|\bher i\b|Byen|Bygden|Egnen|Omegn|Prestegjeld|Præstegjeld|Sogn|Fjord|igaar|i Gaar|inat|i Nat|forleden|Forleden)/;
 
 const rows: any[] = [];
-for (const f of readdirSync(`${dir}/data`).filter(f => /^h_.*\.jsonl$/.test(f))) {
-  for (const l of readFileSync(`${dir}/data/${f}`, "utf8").split("\n")) { if (!l) continue; try { rows.push(JSON.parse(l)); } catch { console.error("bad row " + f); } }
+// HDIR=data/v reads the query-variant harvest (hv_*.jsonl) instead of the main one
+const HDIR = `${dir}/${process.env.HDIR ?? "data"}`;
+for (const f of readdirSync(HDIR).filter(f => /^hv?_.*\.jsonl$/.test(f))) {
+  for (const l of readFileSync(`${HDIR}/${f}`, "utf8").split("\n")) { if (!l) continue; try { rows.push(JSON.parse(l)); } catch { console.error("bad row " + f); } }
 }
 if (rows.length === 0) { console.error("0 rows parsed"); process.exit(1); }
 const inRange = rows.filter(r => r.year >= FROM && r.year <= TO);

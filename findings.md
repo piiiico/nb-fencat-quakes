@@ -1,6 +1,8 @@
 # Findings
 
-An AI agent (Pico, operated by Håkon Åmdal) read 19th-century Norwegian newspapers from the National Library of Norway (nb.no) and compared every local earthquake report with FENCAT, the Fennoscandian earthquake catalogue (University of Helsinki).
+An AI agent (Pico, operated by Håkon Åmdal) read 19th-century Norwegian newspapers from the National Library of Norway (nb.no), and later Danish papers from the Royal Danish Library (Mediestream), and compared every local earthquake report with FENCAT, the Fennoscandian earthquake catalogue (University of Helsinki).
+
+F1 and F2 are earthquakes missing from FENCAT. F3 is an earthquake FENCAT has, but under the wrong date.
 
 ## F1: 19 June 1875, about 05:30 local time, southern Norway coast. Not in FENCAT.
 
@@ -19,7 +21,7 @@ Dagens Nyheder (1875-06-29), quoting Flekkefjord, also reports another shock the
 The Mandal and Kristiansand paragraphs were transcribed from the page images (links below), not from OCR.
 
 **What the catalogue has.** Nothing for this event:
-- FENCAT live search (seismo.helsinki.fi/EQ-search), run 2026-10-12, for 1875-05-01 to 1875-08-31 within 800 km of 59°N 8°E: one event, LEH 1875-08-13 near Bornholm (54.8°N 14.0°E). That is a different event.
+- FENCAT live search (seismo.helsinki.fi/EQ-search), run 2026-10-12, for 1875-05-01 to 1875-08-31 within 800 km of 59°N 8°E: one event, LEH 1875-08-13 near Bornholm (54.8°N 14.0°E). That is a different event, and its date is wrong: it is the Bornholm earthquake of 13 November 1875 (see F3).
 - FENCAT for all of 1875–1876 within 1500 km: four events, none in June 1875.
 - FENCAT file of 2020-02-28: the only 1875 rows are 08-13 (Bornholm) and 12-22 (58.7°N 11.2°E). No row dated 15–23 June in any 19th-century year near 57–60°N 5–10°E, so this is not a date slip.
 - AHEAD/EPICA (emidius.eu): no event north of 54°N in 1875–76. EPICA only lists events of roughly Mw 4 and up, so this check is weak.
@@ -68,9 +70,32 @@ The times agree to within about 15 minutes: Maridalen 14:40, Kongsberg 14:50–1
 - FENCAT: `bun fencat-live.ts 1879-03-01 1879-05-31 60.0 10.5 600`
 - Crops for any paragraph: `bun crop.ts <issue URN> <regex> <name>`
 
+## F3: the Bornholm earthquake of 13 November 1875 is in FENCAT as 13 August 1875.
+
+**What happened.** On Saturday evening 13 November 1875, at 18:06 local time, an earthquake was felt over almost all of Bornholm. Professor F. Johnstrup (University of Copenhagen) asked for reports in the Bornholm papers, received 36 and published them: «Nogle Bemærkninger om Jordskjælvet paa Bornholm den 13de November 1875», Videnskabelige Meddelelser fra den naturhistoriske Forening i Kjøbenhavn for 1875, pp. 425–428, read on 26 January 1876. He lists 16 parishes where it was felt, from Allinge to Pedersker, strongest on the west and south side.
+
+**What the catalogues say.**
+- Lehmann (1956), «Danske jordskælv», Medd. Dansk Geol. Forening 13, p. 101, entry 27: `1875 VIII 13 18 IV½ Bornholm Johnstrup`. Her source is Johnstrup's paper, and her text describes his event («mærkedes over så godt som hele øen, men stærkest på vest og sydsiden»). The month in the table is VIII (August). Johnstrup's title says November.
+- FENCAT, both the 2020-02-28 file and the live EQ-search (run 2026-10-12): `LEH 18750813 17`, 54.8°N 14.0°E, IV+. The agency code LEH is Lehmann, and 17 UT is 18:06 Bornholm time. It is her entry with her date.
+- FENCAT has no event at all near Bornholm between 15 October and 31 December 1875 (live search within 400 km of 55.1°N 14.8°E). As a control, the same search for August–December 1875 returns the LEH row.
+
+**Why we think August is wrong.** Johnstrup's title page (image below) says 13 November 1875. 44 Danish newspaper items (in 34 papers) between 16 November and 2 December 1875 describe it, starting with the two Rønne papers: Bornholms Tidende (16 November: «I Lørdags Aftes mellem Kl. 6 og 7 sporedes her og i Nærheden af Byen en let Jordrystelse») and Bornholms Avis (18 November: also felt in Aakirkeby, Aaker, Pedersker and Bodilsker). Johnstrup's own call for reports, printed in both Rønne papers on 20 and 23 November, refers to «Lørdagen den 13de November». 13 November 1875 was a Saturday, and 13 August 1875 was a Friday. At least six Swedish papers reprinted the November report, two of them naming 13 November In the Danish papers of 10 August to 5 October 1875 there is no report of an earthquake on Bornholm or nearby, and the Swedish papers of 12 August to 20 September have none that mention Bornholm or southern Sweden.
+
+**What we did not check.** Johnstrup's 36 letters are in the archive of the Mineralogical Museum (Copenhagen), and we have not seen them. We also have not checked whether GEUS's current Danish catalogue has already corrected the date. The live FENCAT row still says August.
+
+**Replicate it.**
+- Johnstrup 1876, title page (p. 425): https://archive.org/details/mobot31753002558275/page/n432 (full text: https://archive.org/download/mobot31753002558275/mobot31753002558275_djvu.txt)
+- Lehmann 1956, the table on p. 101: https://2dgf.dk/xpdf/bull-1956-13-2-88-103.pdf
+- Bornholms Tidende, 16 November 1875, p. 1: http://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3Adc4d63a0-d529-426f-a314-84a1bb32a964
+- Bornholms Avis, 18 November 1875, p. 2: http://www2.statsbiblioteket.dk/mediestream/avis/record/doms_aviser_page%3Auuid%3A181042fc-521b-424b-80ce-2b0a89c39301
+- FENCAT: `bun fencat-live.ts 1875-08-01 1875-12-31 55.1 14.8 400`
+- Danish papers: `bun dk.ts '(jordskj* OR jordryst*) AND timestamp:[1875-11-13T00:00:00Z TO 1875-12-05T00:00:00Z]' 'Bornh|Rønne'` (Mediestream labs API, open, no key)
+
+The Danish newspaper text is OCR. The two decisive documents, Johnstrup's title page and Lehmann's table, were read on the page images.
+
 ## Scorecard (honest false-positive count)
 
-- Candidates logged: **19**. Verified: **2** (F1, F2).
+- Candidates logged: **22**. Verified: **2** missing events (F1, F2) and **1** catalogue date error (F3).
 - C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it. The weather argues for a frost quake: the Kristiansand paper of 4 January 1841 reports eight days of hard frost, and the Stockholm daily series (Bolin Centre) stays between −3 and −7 °C from 25 December to 6 January. Swedish papers only reprint the Arendal report. **Not verified, not rejected.**
 - C003–C006, C008, C010, C011: one source each. Open. C008 (Drammen and Skoger, morning of 1 October 1849) at first looked like a Kristiania report. The page image shows the Kristiania paper credits Drammens Tidende, so it is one source.
 - C009, Nesna/Hemnes 1857: a correspondent's list of dated shocks. FENCAT has the Nesna swarm of 1819–1829 but nothing from 1857. There is one source, so it stays open.
@@ -78,6 +103,9 @@ The times agree to within about 15 minutes: Maridalen 14:40, Kongsberg 14:50–1
 - C017–C019 (Lillesand 11 June 1833, Trondhjem 7 June 1847, Trondhjem 16 December 1840): one report each, none in FENCAT or Thomassen (1888). Open. The 1840 report first looked like a Kristiania report. The page image shows that the Kristiania paper credits Trondhjems Stiftstidende.
 - Matched after reading: the "Bergen earthquake at the end of March 1847", retold with extra detail by a London paper, is in FENCAT as KOL 1847-03-19 19:15 (60.2°N 5.2°E).
 - Rejected after reading, before they became candidates: Reykjavik 1864 (outside FENCAT's area), pieces on foreign earthquakes (two 1873 paragraphs that read like local reports are translations from Rome and Padua), an 18th-century climate history, and a satire.
+
+- Danish papers (Mediestream), searched 1800–1885 for local felt reports. As a positive control, FENCAT's Danish events of 1815, 1841, 1844 and both 1869 events show up (those of 1809 and 1829 do not), and so does Bornholm 1875, which led to F3. C021, North Zealand coast, 12 July 1866 around 19:30–20:00, strongest in Ramløse parish by Arresø: one compiled report (Dagbladet), and people first took it for a gunpowder explosion at Frederiksværk. Not in Lehmann (1956) or FENCAT. Open. C022, Allerup in Sneum parish near Ribe, 20 January 1873: two houses felt light shocks, but there was a storm with a very low barometer and lightning that evening. Open, weak. Johnstrup (1876) himself dismissed two 1872 reports (Fanø, 22 April, and Rønne, 12 November) as thunder and storm. We agree and did not log them. A Copenhagen report of 29 May 1861 was explained at the time as naval gunfire, and we did not log it either. Danish papers reprinted F1 and F2 from the Norwegian papers but have no Danish felt report of either.
+- Query variants (Rystelse, Jordstød, Jordrystning) over the Norwegian papers 1814–1886 (about 9,000 paragraphs): no new candidates. Every unmatched hit was a foreign earthquake (Peru 1868, Portugal 1858, Valparaiso 1877, Malta 1856, Saxony 1872, Darmstadt 1873, Gibraltar 1883), a figure of speech, an explosion or a storm.
 
 ## Credits
 
