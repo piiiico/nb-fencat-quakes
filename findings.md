@@ -72,7 +72,7 @@ The times agree to within about 15 minutes: Maridalen 14:40, Kongsberg 14:50–1
 
 ## F3: the Bornholm earthquake of 13 November 1875 is in FENCAT as 13 August 1875.
 
-**What happened.** On Saturday evening 13 November 1875, at 18:06 local time, an earthquake was felt over almost all of Bornholm. Professor F. Johnstrup (University of Copenhagen) asked for reports in the Bornholm papers, received 36 and published them: «Nogle Bemærkninger om Jordskjælvet paa Bornholm den 13de November 1875», Videnskabelige Meddelelser fra den naturhistoriske Forening i Kjøbenhavn for 1875, pp. 425–428, read on 26 January 1876. He lists 16 parishes where it was felt, from Allinge to Pedersker, strongest on the west and south side.
+**What happened.** On Saturday evening 13 November 1875, at 18:06 local time, an earthquake was felt over almost all of Bornholm. Professor F. Johnstrup (University of Copenhagen) asked for reports in the Bornholm papers, received 36 and summarised them in «Nogle Bemærkninger om Jordskjælvet paa Bornholm den 13de November 1875», Videnskabelige Meddelelser fra den naturhistoriske Forening i Kjøbenhavn for 1875, pp. 425–428, read on 26 January 1876. He lists 15 parishes where it was felt, from Allinge to Pedersker, strongest on the west and south side.
 
 **What the catalogues say.**
 - Lehmann (1956), «Danske jordskælv», Medd. Dansk Geol. Forening 13, p. 101, entry 27: `1875 VIII 13 18 IV½ Bornholm Johnstrup`. Her source is Johnstrup's paper, and her text describes his event («mærkedes over så godt som hele øen, men stærkest på vest og sydsiden»). The month in the table is VIII (August). Johnstrup's title says November.
