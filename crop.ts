@@ -1,5 +1,5 @@
 // Crop the page-image region of the ALTO text block(s) matching a regex. usage: bun crop.ts <URN> <regex> <outPrefix>
-// Prints the IIIF crop URL(s) (public, citable) and saves JPGs to /workspace/tmp.
+// Prints the IIIF crop URL(s) (public, citable) and saves JPGs to the current directory.
 const [urn, pat, out = "crop"] = process.argv.slice(2);
 const re = new RegExp(pat, "i");
 const j = await (await fetch(`https://api.nb.no/catalog/v1/items?q=${encodeURIComponent(urn)}&size=5`)).json();
@@ -24,7 +24,7 @@ for (const cv of man.sequences[0].canvases) {
       if (ln) { const v = Number(ln[1].match(/VPOS="([\d.]+)"/)?.[1]) * k; yy = Math.max(0, Math.round(v) - 350); h = 1100; }
     }
     const url = `https://www.nb.no/services/image/resolver/${pageUrn}/${x},${yy},${w},${h}/full/0/default.jpg`;
-    const r = await fetch(url); const f = `/workspace/tmp/${out}-${++n}.jpg`;
+    const r = await fetch(url); const f = `${out}-${++n}.jpg`;
     await Bun.write(f, await r.arrayBuffer());
     console.log(`${r.status} ${f}\n${url}\n${txt.slice(0, 160)}`);
   }
