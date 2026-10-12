@@ -70,11 +70,13 @@ The times agree to within about 15 minutes: Maridalen 14:40, Kongsberg 14:50–1
 
 ## Scorecard (honest false-positive count)
 
-- Candidates logged: **16**. Verified: **2** (F1, F2).
-- C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it, and we have found no daily temperature for 1 January 1841. **Not verified, not rejected.**
+- Candidates logged: **19**. Verified: **2** (F1, F2).
+- C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it. The weather argues for a frost quake: the Kristiansand paper of 4 January 1841 reports eight days of hard frost, and the Stockholm daily series (Bolin Centre) stays between −3 and −7 °C from 25 December to 6 January. Swedish papers only reprint the Arendal report. **Not verified, not rejected.**
 - C003–C006, C008, C010, C011: one source each. Open. C008 (Drammen and Skoger, morning of 1 October 1849) at first looked like a Kristiania report. The page image shows the Kristiania paper credits Drammens Tidende, so it is one source.
 - C009, Nesna/Hemnes 1857: a correspondent's list of dated shocks. FENCAT has the Nesna swarm of 1819–1829 but nothing from 1857. There is one source, so it stays open.
-- C012–C016 (Valle 11 April 1886, Bodø 2 May 1886, Kongsvinger/Solør 7 November 1867, Reisa 9 July 1865, Rolla 23 July 1865): each is missing from FENCAT and from Thomassen (1888), but each rests on one local report. Open. The Reisa report was reprinted in Trøndelag papers, which first made it look like a separate Indherred quake.
+- C012–C016 (Valle 11 April 1886, Bodø 2 May 1886, Kongsvinger/Solør 7 November 1867, Reisa 9 July 1865, Rolla 23 July 1865): each is missing from FENCAT and from Thomassen (1888), but each rests on one local report. Open. The Reisa report was reprinted in Trøndelag papers, which first made it look like a separate Indherred quake. We searched Swedish (KB) and Finnish (National Library of Finland) papers for second sources for C002, C009, C014 and C015. They hold reprints of the Norwegian reports and nothing observed locally. The open Swedish newspaper text stops around 1877, so the 1879 and 1886 events cannot be checked there.
+- C017–C019 (Lillesand 11 June 1833, Trondhjem 7 June 1847, Trondhjem 16 December 1840): one report each, none in FENCAT or Thomassen (1888). Open. The 1840 report first looked like a Kristiania report. The page image shows that the Kristiania paper credits Trondhjems Stiftstidende.
+- Matched after reading: the "Bergen earthquake at the end of March 1847", retold with extra detail by a London paper, is in FENCAT as KOL 1847-03-19 19:15 (60.2°N 5.2°E).
 - Rejected after reading, before they became candidates: Reykjavik 1864 (outside FENCAT's area), pieces on foreign earthquakes (two 1873 paragraphs that read like local reports are translations from Rome and Padua), an 18th-century climate history, and a satire.
 
 ## Credits

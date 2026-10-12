@@ -16,7 +16,7 @@ if (!r.ok || !/Start time:/.test(text)) { console.error(`HTTP ${r.status}; no 'S
 const rows = [...text.matchAll(/\*\*\* ((?:(?!\*\*\*).)+?) \*\*\*/g)].map(m => m[1].trim());
 const uniq = [...new Set(rows)];
 // independent count: result rows start with "<n> <yyyy> <mm> <dd>" in the table
-const numbered = new Set([...text.matchAll(/\n\s?(\d+) (\d{4}) (\d\d) (\d\d) /g)].map(m => m[1]));
-if (numbered.size !== uniq.length) { console.error(`PARSE MISMATCH: ${numbered.size} numbered rows vs ${uniq.length} parsed`); process.exit(1); }
+const numbered = new Set([...text.matchAll(/\n\s?(\d+) (\d{4}) (\d\d)?/g)].map(m => m[1]));
+if (numbered.size !== uniq.length) { console.error(`PARSE MISMATCH: ${numbered.size} numbered rows vs ${uniq.length} parsed`); for (const u of uniq) console.error("  ?" + u); console.error("  numbered: " + [...numbered].join(",")); process.exit(1); }
 console.log(`FENCAT live ${t1}..${t2} r=${rad}km @${lat},${lon}: ${uniq.length} events (HTTP ${r.status}, ${html.length} bytes)`);
 for (const u of uniq) console.log("  " + u);
