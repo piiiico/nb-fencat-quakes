@@ -17,7 +17,7 @@ for (const line of readFileSync(`${dir}/data/FENCAT-2020-02-28.txt`, "utf8").spl
 }
 if (evs.length < 20000) { console.error(`FENCAT parse floor: ${evs.length} < 20000`); process.exit(1); }
 const dayNum = (y: number, m: number, d: number) => Date.UTC(y, m - 1, d) / 864e5;
-const scand = evs.filter(e => e.lat >= 56 && e.lon <= 20 && e.lon >= 2);
+const scand = evs.filter(e => e.lat >= 56 && e.lon <= 35 && e.lon >= 2);
 
 function fencatNear(ts: number, back = 60): Ev[] {
   const y = Math.floor(ts / 10000), m = Math.floor(ts / 100) % 100, d = ts % 100;
@@ -55,7 +55,10 @@ for (const r of inRange) {
   kept.push({ ...r, place: g?.[1] ?? null, score, fencat: near.map(e => e.line) });
 }
 writeFileSync(`${dir}/data/kept.jsonl`, kept.map(k => JSON.stringify(k)).join("\n") + "\n");
-const un = kept.filter(k => k.fencat.length === 0);
+// lon 2-35 so Finnmark events match (Vadsø 1873-02-21 = PAN 68.7N 33.3E), but matching has no distance test:
+// a row whose ONLY matches lie east of 20E stays in the unmatched list, tagged EASTONLY, so the reader judges distance.
+const east = (l: string) => { const m = l.slice(16).match(/\s(-?\d+\.\d+)\s+(-?\d+\.\d+)/); return m ? +m[2] > 20 : false; };
+const un = kept.filter(k => k.fencat.length === 0 || k.fencat.every(east));
 console.error(`rows=${inRange.length} kept=${kept.length} unmatched=${un.length} (years ${FROM}-${TO})`);
 const show = process.argv.includes("--matched") ? kept : un;
-for (const k of show.sort((a, b) => a.ts - b.ts)) console.log(`${k.ts} ${k.title} s${k.score} [${k.place ?? "-"}] ${k.fencat.length ? "FENCAT:" + k.fencat.length : "NOFENCAT"} | ${k.conc.slice(0, 260)}`);
+for (const k of show.sort((a, b) => a.ts - b.ts)) console.log(`${k.ts} ${k.title} s${k.score} [${k.place ?? "-"}] ${!k.fencat.length ? "NOFENCAT" : k.fencat.every(east) ? "EASTONLY:" + k.fencat.map((l: string) => l.slice(0, 40).replace(/\s+/g, " ")).join(";") : "FENCAT:" + k.fencat.length} | ${k.conc.slice(0, 260)}`);

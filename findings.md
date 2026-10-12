@@ -70,11 +70,12 @@ The times agree to within about 15 minutes: Maridalen 14:40, Kongsberg 14:50–1
 
 ## Scorecard (honest false-positive count)
 
-- Candidates logged: **11**. Verified: **2** (F1, F2).
+- Candidates logged: **16**. Verified: **2** (F1, F2).
 - C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it, and we have found no daily temperature for 1 January 1841. **Not verified, not rejected.**
 - C003–C006, C008, C010, C011: one source each. Open. C008 (Drammen and Skoger, morning of 1 October 1849) at first looked like a Kristiania report. The page image shows the Kristiania paper credits Drammens Tidende, so it is one source.
 - C009, Nesna/Hemnes 1857: a correspondent's list of dated shocks. FENCAT has the Nesna swarm of 1819–1829 but nothing from 1857. There is one source, so it stays open.
-- Rejected after reading, before they became candidates: Reykjavik 1864 (outside FENCAT's area), pieces on foreign earthquakes, an 18th-century climate history, and a satire.
+- C012–C016 (Valle 11 April 1886, Bodø 2 May 1886, Kongsvinger/Solør 7 November 1867, Reisa 9 July 1865, Rolla 23 July 1865): each is missing from FENCAT and from Thomassen (1888), but each rests on one local report. Open. The Reisa report was reprinted in Trøndelag papers, which first made it look like a separate Indherred quake.
+- Rejected after reading, before they became candidates: Reykjavik 1864 (outside FENCAT's area), pieces on foreign earthquakes (two 1873 paragraphs that read like local reports are translations from Rome and Padua), an 18th-century climate history, and a satire.
 
 ## Credits
 
