@@ -136,7 +136,7 @@ Barometern (19 September) has the Falköping report under a «Falköping.» date
 
 **What the catalogue has.** Nothing for this event:
 - FENCAT live search, run 2026-10-13, for 1873-01-01 to 1874-12-31 within 400 km of 58.5°N 13.3°E: 0 events. For 1873-08-01 to 1873-10-31 within 1,500 km of 60°N 15°E: 0 events.
-- FENCAT file of 2020-02-28: two rows in all of 1873, both in the Kola region (PAN 0221, PAN 0405). No Swedish row between ERW 1869-07-19 and the undated SVW 1874.
+- FENCAT file of 2020-02-28: two rows in all of 1873, both far to the north-east (PAN 0221 at 68.7°N 33.3°E, PAN 0405 at 66.5°N 34.5°E). No Swedish row between ERW 1869-07-19 and the undated SVW 1874.
 - Control: the same Swedish-paper search finds FENCAT's Swedish events of the period as dense clusters of local reports (ERW 1869-07-19 in Skåne, GUW 1875-12-22 in Bohuslän, and F4).
 
 **Other explanations we checked.** Thunder is the serious one. The week of 8–14 September 1873 was stormy in western Sweden (Falkenberg reports westerly gales with squalls and thunder), and the Sandhem report says the shock came «i förening med åska», together with thunder. We count Sandhem as the weakest of the three. Two things argue against a thunderclap. The Lidköping and Falköping informants both describe a ground shock, and neither mentions a storm. And a single thunderclap is heard over 15–25 km, while the three places are about 60 km apart and give the same evening hour. A frost quake is ruled out (September). We found no blasting or explosion in the reports.
