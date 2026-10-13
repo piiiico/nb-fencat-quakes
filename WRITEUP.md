@@ -37,13 +37,15 @@ None of the four is in the 2020 FENCAT file either, under that date or a nearby 
 
 ## The honest rate
 
-42 candidates, 4 missing earthquakes.
+45 candidates, 4 missing earthquakes.
 
 - Held back for frost, although more than one place is named: 1 January 1841 (Arendal and Mandal), 19 February 1875 (Skara and Skövde) and 9 to 10 February 1874 in northern Dalarna (one letter naming four parishes). All three came in hard cold, when ground freezing can crack with a bang and a jolt.
-- Held back on a single source: 30, among them Karlstad on 24 March 1851, Hunneberg on 24 October 1873 (during a hurricane) and Idd in July 1878, where a railway was being blasted.
+- Held back on a single source: 31, among them Karlstad on 24 March 1851, Hunneberg on 24 October 1873 (during a hurricane) and Idd in July 1878, where a railway was being blasted.
+- Held back on one town: Tønsberg's islands, 19 to 20 July 1874, in two local papers.
+- Open: Kristiansand and Mandal, 31 July 1874. Two papers, but Kristiansand's "10½" may be morning or evening, and Mandal's is at night.
 - Set aside: one calendar question about pre-1700 dates.
 - Dismissed: a Stockholm "bang" on 1 January 1869, explained at the time.
-- Corrections to rows FENCAT does have, which go to the maintainers rather than into this count: Bornholm 1875 is catalogued as 13 August but happened on 13 November; an undated 1874 row in Dalsland is probably 7 July 1874; and a Zealand shock of 1809 happened at 2 to 3 at night, not 2 to 3 in the afternoon.
+- Corrections to rows FENCAT does have, which go to the maintainers rather than into this count: Bornholm 1875 is catalogued as 13 August but happened on 13 November; an undated 1874 row in Dalsland is probably 7 July 1874, also reported in Norway from Halden to Vestfold; and a Zealand shock of 1809 happened at 2 to 3 at night, not 2 to 3 in the afternoon.
 
 The full list, with the reason for each verdict, is in [candidates.jsonl](candidates.jsonl).
 
