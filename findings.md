@@ -109,7 +109,8 @@ Wermlands Läns Tidning (1875-04-28) has its own Karlstad report (OCR): «mellan
 **What the catalogue has.** Nothing for this event:
 - FENCAT live search, run 2026-10-12, for 1875-03-01 to 1875-06-30 within 400 km of 59.4°N 13.5°E: 0 events. For the whole of 1875 the same search returns one event, GUW 1875-12-22 in Bohuslän. That one is the control: same year, same region, and the search finds it.
 - FENCAT file of 2020-02-28: it has two rows in all of 1875 (LEH 0813, which is F3, and GUW 1222). No row dated 26–28 April in any year at 57.8–60.2°N 11.5–15°E, so this is not a date slip of a known event.
-- One row we cannot rule out: `TOW?1878 59.0 13.5 III`, a row with an uncertain year and no month or day. The open Swedish newspaper text stops in 1876, so we could not check 1878.
+- Kjellén (1910), *Sveriges jordskalf* (Göteborgs Högskolas Årsskrift XV, 1909, no. 2), the Swedish catalogue to 1906; scan at archive.org/details/GoteborgsHogskolasArsskrift15, catalogue p. 59 = leaf 242: entries run from no. 259 (1869/70) to no. 265 (2 February 1879), and none is in April 1875.
+- The only nearby undated row, `TOW?1878 59.0 13.5 III`, looks like Kjellén's no. 264: «(?) 1879 (året för meddelandet). Vänerns vattenskott, kollektivuppgift; specialfall 1878. Törnebohm i G. F. F., 476 n.» That is a note on «water-shots» on Lake Vänern, not an 1875 shock. We match it by the code, the question mark, the year and the place. Nothing more ties them.
 
 **Other explanations we checked.** A frost quake does not fit: the Stockholm daily mean on 27 April 1875 was +7.4 °C (Bolin Centre series), it happened at 09:17 in the morning, and it was felt in parishes on both sides of Karlstad. We found no explosion in the reports. The Danish papers that first pointed us to this event dated it 4 May. That is when they printed it. The Swedish papers give Tuesday 27 April.
 
@@ -138,6 +139,7 @@ Barometern (19 September) has the Falköping report under a «Falköping.» date
 - FENCAT live search, run 2026-10-13, for 1873-01-01 to 1874-12-31 within 400 km of 58.5°N 13.3°E: 0 events. For 1873-08-01 to 1873-10-31 within 1,500 km of 60°N 15°E: 0 events.
 - FENCAT file of 2020-02-28: two rows in all of 1873, both far to the north-east (PAN 0221 at 68.7°N 33.3°E, PAN 0405 at 66.5°N 34.5°E). No Swedish row between ERW 1869-07-19 and the undated SVW 1874.
 - Control: the same Swedish-paper search finds FENCAT's Swedish events of the period as dense clusters of local reports (ERW 1869-07-19 in Skåne, GUW 1875-12-22 in Bohuslän, and F4).
+- Kjellén (1910), *Sveriges jordskalf* (Göteborgs Högskolas Årsskrift XV, 1909, no. 2), the Swedish catalogue to 1906; scan at archive.org/details/GoteborgsHogskolasArsskrift15, catalogue p. 59 = leaf 242: no entry for 1873 (no. 259 is 1869/70, no. 260 is summer 1874). On p. 132 Kjellén writes that his counts for the 1830s and 1870s are low «af särskilda orsaker», for statistical reasons.
 
 **Other explanations we checked.** Thunder is the serious one. The week of 8–14 September 1873 was stormy in western Sweden (Falkenberg reports westerly gales with squalls and thunder), and the Sandhem report says the shock came «i förening med åska», together with thunder. We count Sandhem as the weakest of the three. Two things argue against a thunderclap. The Lidköping and Falköping informants both describe a ground shock, and neither mentions a storm. And a single thunderclap is heard over 15–25 km, while the three places are about 60 km apart and give the same evening hour. A frost quake is ruled out (September). We found no blasting or explosion in the reports.
 
@@ -166,9 +168,11 @@ Dozens of Swedish papers reprinted the Strömstad report, and we did not count t
 - FENCAT file of 2020-02-28: one row in the area for 1874, `SVW 1874     08  58.9 12.6 V`, with no month and no day; the `08` sits in the hour column. 9:00–9:45 local mean time at 11.2–12.4°E is about 08:15–08:55 UT, so the hour fits the 7 July shock, and the location (58.9°N 12.6°E) is in Dalsland, between Strömstad and Åmål. We think this row is the 7 July event without its date, but it could also be one of the other shocks of that summer.
 - FENCAT live search, run 2026-10-13, for 1874 within 300 km of 58.9°N 12.6°E: 0 events. For 1870–1880 within 150 km: three events (KOL 1871-03-26, GUW 1875-12-22, NOW 1880-03-03), not the 1874 row. So in the live search this earthquake does not exist. Control: the same live search does return a year-only row elsewhere (`SVW 1869 ?` in Skåne, with ERW 1869-07-19) and both 1874 Norwegian rows.
 
+- Kjellén (1910), *Sveriges jordskalf* (Göteborgs Högskolas Årsskrift XV, 1909, no. 2), the Swedish catalogue to 1906; scan at archive.org/details/GoteborgsHogskolasArsskrift15, catalogue p. 59 = leaf 242: no. 260 reads «1874, sommaren, kl. 9 f. m.; reminiscens från 1894, n:o 349. Tydje (Tösse i Dals lågland), lokalt. Svedm. (III, 36).» This looks like the source of the SVW row: summer 1874, 9 in the morning, Tösse parish near Åmål, from a recollection sent in 20 years later. The hour and the place fit 7 July. The entry alone does not rule out the other shocks of that summer.
+
 **Other explanations we checked.** Blasting was going on along the new Bergslagsbanan railway that summer, but a blast is not felt at Strömstad and Åmål at once. July rules out a frost quake.
 
-**What we did not check.** The Swedish catalogue behind the SVW rows, in the original. Norwegian papers: Smaalenenes Amtstidende (via Göteborgs Handels- och Sjöfartstidning, 16 July) reports shocks "a few days ago" at Fredrikshald and in Enningdalen; we have not read it.
+**What we did not check.** Svedmark's 1894 report (III, 36) that Kjellén cites, in the original. Norwegian papers: Smaalenenes Amtstidende (via Göteborgs Handels- och Sjöfartstidning, 16 July) reports shocks "a few days ago" at Fredrikshald and in Enningdalen; we have not read it.
 
 **Replicate it.**
 - Strömstad: https://data.kb.se/iiif/3/dark-22317632%2Fbibr6874dntptd06nhx_18740708_172640_54_0002.jp2/1294,2796,805,869/max/0/default.jpg
