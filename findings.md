@@ -2,7 +2,7 @@
 
 An AI agent (Pico, operated by Håkon Åmdal) read 19th-century Norwegian newspapers from the National Library of Norway (nb.no), and later Danish papers from the Royal Danish Library (Mediestream), and compared every local earthquake report with FENCAT, the Fennoscandian earthquake catalogue (University of Helsinki).
 
-F1, F2 and F4 are earthquakes missing from FENCAT. F3 is an earthquake FENCAT has, but under the wrong date. F4 came from Swedish papers (National Library of Sweden, tidningar.kb.se).
+F1, F2, F4 and F5 are earthquakes missing from FENCAT. F3 is an earthquake FENCAT has, but under the wrong date. F4 and F5 came from Swedish papers (National Library of Sweden, tidningar.kb.se).
 
 ## F1: 19 June 1875, about 05:30 local time, southern Norway coast. Not in FENCAT.
 
@@ -122,11 +122,39 @@ Wermlands Läns Tidning (1875-04-28) has its own Karlstad report (OCR): «mellan
 - FENCAT: `bun fencat-live.ts 1875-03-01 1875-06-30 59.4 13.5 400`
 - Swedish papers: `bun kb-se.ts jordstöt 1875-04-27 1875-05-25` (data.kb.se, open, no key)
 
+## F5: 10 September 1873, about 20:30–21:00 local time, Västergötland (Sweden). Not in FENCAT.
+
+**What happened.** On Wednesday evening 10 September 1873 a shock was felt in three places about 60 km apart, in the farm country between Lake Vänern and Falköping. Each report comes from a different paper with its own informant:
+
+| Place | Paper (date) | What it says (transcribed from the page image) |
+|---|---|---|
+| Hangelösa and Källby parishes, near Lidköping | Lidköpings Tidning (1873-09-13, p. 2) | «Sistl. onsdag omkring kl. 9 på aftonen kändes några minuter en stark jordstöt i och omkring Hangelösa och Kjellby. Trowärdiga personer derifrån trakten försäkra att stöten war så stark att fönsterrutorna kommo i darrning i boningshusen.» |
+| Falköping area | Jönköpings Dagblad (1873-09-15, p. 2) | «Från Falköpingstrakten meddelas oß af tillförlitlig person, att man derstädes sistl. onsdags qwäll kl. half 9 förnam ett lindrigt jordskalf med mycket buller, som warade nära nog en half minut.» |
+| Sandhem, south-east of Falköping | Mariestads Weckoblad (1873-09-13, p. 4) | «En stark jordstöt i förening med åska förmärktes sistl. onsdags afton, enligt oß meddelad uppgift, i Sandhem.» |
+
+Barometern (19 September) has the Falköping report under a «Falköping.» dateline, Norrländska Korrespondenten (20 September) sums up «Falköping, Mariestad och Lidköping», and Östgöta Correspondenten (18 September) gives the date as «d. 10 d:s». More than 20 other Swedish papers reprinted the Lidköping or Falköping report. We did not count those as sources.
+
+**What the catalogue has.** Nothing for this event:
+- FENCAT live search, run 2026-10-13, for 1873-01-01 to 1874-12-31 within 400 km of 58.5°N 13.3°E: 0 events. For 1873-08-01 to 1873-10-31 within 1,500 km of 60°N 15°E: 0 events.
+- FENCAT file of 2020-02-28: two rows in all of 1873, both in the Kola region (PAN 0221, PAN 0405). No Swedish row between ERW 1869-07-19 and the undated SVW 1874.
+- Control: the same Swedish-paper search finds FENCAT's Swedish events of the period as dense clusters of local reports (ERW 1869-07-19 in Skåne, GUW 1875-12-22 in Bohuslän, and F4).
+
+**Other explanations we checked.** Thunder is the serious one. The week of 8–14 September 1873 was stormy in western Sweden (Falkenberg reports westerly gales with squalls and thunder), and the Sandhem report says the shock came «i förening med åska», together with thunder. We count Sandhem as the weakest of the three. Two things argue against a thunderclap. The Lidköping and Falköping informants both describe a ground shock, and neither mentions a storm. And a single thunderclap is heard over 15–25 km, while the three places are about 60 km apart and give the same evening hour. A frost quake is ruled out (September). We found no blasting or explosion in the reports.
+
+**What we did not check.** The Swedish historical catalogues FENCAT draws on, in the original. Any weather record from Skaraborg for the evening of 10 September.
+
+**Replicate it.**
+- Lidköping: https://data.kb.se/iiif/3/dark-10770515%2Fbib22683391_18730913_154764_73_0002.jp2/1779,2300,733,900/max/0/default.jpg
+- Falköping (Jönköpings Dagblad): https://data.kb.se/iiif/3/dark-14509573%2Fbib4gg6tn822j9gjj9q_18730915_162667_213_0002.jp2/1212,2729,823,2439/max/0/default.jpg
+- Sandhem (Mariestads Weckoblad): https://data.kb.se/iiif/3/dark-12084559%2Fbib5fcp0xbl31jt1wwv_18730913_154979_73_0004.jp2/3190,4327,704,884/max/0/default.jpg
+- FENCAT: `bun fencat-live.ts 1873-01-01 1874-12-31 58.5 13.3 400`
+- Swedish papers: `bun se-harvest.ts 1873 1873` then `bun se-analyze.ts 1873 1873`, or `bun kb-se.ts "jordstöt*" 1873-09-13 1873-09-20`
+
 ## Scorecard (honest false-positive count)
 
-- Candidates logged: **26**. Verified: **3** missing events (F1, F2, F4) and **1** catalogue date error (F3).
+- Candidates logged: **29**. Verified: **4** missing events (F1, F2, F4, F5) and **1** catalogue date error (F3).
 - C023, Skara and Skövde, Friday 19 February 1875 just after 21:00: two independent local papers (Skara Tidning 24 February, Sköfde Tidning 3 March, both read on the page image). In Skara doors sprang open and things fell off the walls; in Skövde, Nya Lerdala and at Mösseberg people felt a lighter shock and an underground rumble at the same time. Not in FENCAT. But it came after a sharp cold snap (the Stockholm daily mean dropped from −1.6 °C on 17 February to −9.6 °C on the 19th), so, as with C002, a frost quake is not ruled out. **Not verified, not rejected.**
-- C025, Årjäng, 6 February 1875, and C026, Åmål, Tuesday 7 July 1874 at about 10:00: one source each. C026 may be the date of FENCAT's year-only row `SVW 1874 08 58.9 12.6 V`. Open.
+- C025, Årjäng, 6 February 1875, and C026, Åmål, Tuesday 7 July 1874 at about 10:00: one source each. C026 may be the date of FENCAT's year-only row `SVW 1874 08 58.9 12.6 V`. Open. C028 (2026-10-13) widens C026: Swedish papers report a shock on Tuesday 7 July 1874 around 9–10 in the morning at Strömstad, Åmål and western Dalsland, and on Friday 14 August in Ödskölt parish, which the report calls "the fifth in these parts in July and August". FENCAT has one undated row for that area in 1874 (hour 08). Not yet read on page images. Open. C029, Söderhamn, 22 January 1875: one source, extreme cold that week. Open, weak.
 - C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it. The weather argues for a frost quake: the Kristiansand paper of 4 January 1841 reports eight days of hard frost, and the Stockholm daily series (Bolin Centre) stays between −3 and −7 °C from 25 December to 6 January. Swedish papers only reprint the Arendal report. **Not verified, not rejected.**
 - C003–C006, C008, C010, C011: one source each. Open. C008 (Drammen and Skoger, morning of 1 October 1849) at first looked like a Kristiania report. The page image shows the Kristiania paper credits Drammens Tidende, so it is one source.
 - C009, Nesna/Hemnes 1857: a correspondent's list of dated shocks. FENCAT has the Nesna swarm of 1819–1829 but nothing from 1857. There is one source, so it stays open.
