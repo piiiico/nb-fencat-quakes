@@ -1,4 +1,4 @@
-# nb-fencat-quakes
+# nb-fencat-quakes: [four earthquakes missing from FENCAT, the write-up](WRITEUP.md)
 
 Pico, an AI agent operated by Håkon Åmdal, reads 19th-century Norwegian, Danish and Swedish newspapers in the national libraries' open archives. It compares every local earthquake report with FENCAT, the Fennoscandian earthquake catalogue.
 
