@@ -2,7 +2,7 @@
 
 An AI agent (Pico, operated by Håkon Åmdal) read 19th-century Norwegian newspapers from the National Library of Norway (nb.no), and later Danish papers from the Royal Danish Library (Mediestream), and compared every local earthquake report with FENCAT, the Fennoscandian earthquake catalogue (University of Helsinki).
 
-F1, F2, F4 and F5 are earthquakes missing from FENCAT. F3 is an earthquake FENCAT has, but under the wrong date. F4 and F5 came from Swedish papers (National Library of Sweden, tidningar.kb.se).
+F1, F2, F4 and F5 are earthquakes missing from FENCAT. F3 is an earthquake FENCAT has, but under the wrong date. F6 is an earthquake the FENCAT file has only as an undated row, which the live search does not return. F4, F5 and F6 came from Swedish papers (National Library of Sweden, tidningar.kb.se).
 
 ## F1: 19 June 1875, about 05:30 local time, southern Norway coast. Not in FENCAT.
 
@@ -150,11 +150,37 @@ Barometern (19 September) has the Falköping report under a «Falköping.» date
 - FENCAT: `bun fencat-live.ts 1873-01-01 1874-12-31 58.5 13.3 400`
 - Swedish papers: `bun se-harvest.ts 1873 1873` then `bun se-analyze.ts 1873 1873`, or `bun kb-se.ts "jordstöt*" 1873-09-13 1873-09-20`
 
+## F6: 7 July 1874, about 09:00–10:00 local time, Strömstad and Dalsland (Sweden). The live FENCAT search does not return it; the 2020 file has only an undated row.
+
+**What happened.** On Tuesday morning 7 July 1874 a shock was felt from the coast at Strömstad to Åmål on Lake Vänern, about 90 km apart. Three papers, each with its own report:
+
+| Place | Paper (date) | What it says (transcribed from the page image) |
+|---|---|---|
+| Strömstad | Strömstads Tidning (1874-07-08, p. 2) | «I går på förmiddagen omkring kl. 9 förmärktes ett temligen starkt jordskalf här på orten i riktning från wester till öster. I skärgården häromkring kändes detsamma betydligt starkare än här i staden. Lättare föremål rubbades af skakningen.» |
+| Western Dalsland | Tidning för Wenersborgs stad och län (1874-07-13, p. 3), letter dated 7 July | «I dag wid paß kl. ¾ till 10 f. m. förmärktes här ett lindrigt jordskalf, gående som det tycktes från sydost till nordwest. Under det dånet hördes — minst 15 sekunder — förnams jorden i dallring på en punkt 3 à 4 sekunder.» The paper adds that it was felt further up in Dal, around Åmål, and at Strömstad. |
+| Åmål | Åmåls Tidning (1874-07-10, p. 2) | «En jordstöt kändes i tisdags f. m. wid tiotiden i Åmål och trakten häromkring. Stöten kändes i synnerhet inomhus, der lättare möbler skakades.» |
+
+Dozens of Swedish papers reprinted the Strömstad report, and we did not count those. Later papers (Nya Wermlandstidningen, 2 September 1874, OCR) report another shock in Ödskölt parish in Dalsland on Friday 14 August and call it "the fifth in these parts in July and August". That one has a single source and is logged as candidate C028.
+
+**What the catalogue has.**
+- FENCAT file of 2020-02-28: one row in the area for 1874, `SVW 1874     08  58.9 12.6 V`, with no month and no day; the `08` sits in the hour column. 9:00–9:45 local mean time at 11.2–12.4°E is about 08:15–08:55 UT, so the hour fits the 7 July shock, and the location (58.9°N 12.6°E) is in Dalsland, between Strömstad and Åmål. We think this row is the 7 July event without its date, but it could also be one of the other shocks of that summer.
+- FENCAT live search, run 2026-10-13, for 1874 within 300 km of 58.9°N 12.6°E: 0 events. For 1870–1880 within 150 km: three events (KOL 1871-03-26, GUW 1875-12-22, NOW 1880-03-03), not the 1874 row. So in the live search this earthquake does not exist. Control: the same live search does return a year-only row elsewhere (`SVW 1869 ?` in Skåne, with ERW 1869-07-19) and both 1874 Norwegian rows.
+
+**Other explanations we checked.** Blasting was going on along the new Bergslagsbanan railway that summer, but a blast is not felt at Strömstad and Åmål at once. July rules out a frost quake.
+
+**What we did not check.** The Swedish catalogue behind the SVW rows, in the original. Norwegian papers: Smaalenenes Amtstidende (via Göteborgs Handels- och Sjöfartstidning, 16 July) reports shocks "a few days ago" at Fredrikshald and in Enningdalen; we have not read it.
+
+**Replicate it.**
+- Strömstad: https://data.kb.se/iiif/3/dark-22317632%2Fbibr6874dntptd06nhx_18740708_172640_54_0002.jp2/1294,2796,805,869/max/0/default.jpg
+- Western Dalsland (T. f. Wenersborgs stad och län): https://data.kb.se/iiif/3/dark-6441126%2Fbib11653830_18740713_146968_52_0003.jp2/193,4893,793,1584/max/0/default.jpg
+- Åmål: https://data.kb.se/iiif/3/dark-18862577%2Fbib9n31s2597zpc6nk7_18740710_168771_1_0002.jp2/1284,1317,832,3475/max/0/default.jpg
+- FENCAT: `bun fencat-live.ts 1874-01-01 1874-12-31 58.9 12.6 300` and `bun fencat-live.ts 1869-01-01 1869-12-31 55.4 13.4 100` (control)
+
 ## Scorecard (honest false-positive count)
 
-- Candidates logged: **29**. Verified: **4** missing events (F1, F2, F4, F5) and **1** catalogue date error (F3).
+- Candidates logged: **29**. Verified: **4** missing events (F1, F2, F4, F5), **1** catalogue date error (F3) and **1** undated row dated (F6).
 - C023, Skara and Skövde, Friday 19 February 1875 just after 21:00: two independent local papers (Skara Tidning 24 February, Sköfde Tidning 3 March, both read on the page image). In Skara doors sprang open and things fell off the walls; in Skövde, Nya Lerdala and at Mösseberg people felt a lighter shock and an underground rumble at the same time. Not in FENCAT. But it came after a sharp cold snap (the Stockholm daily mean dropped from −1.6 °C on 17 February to −9.6 °C on the 19th), so, as with C002, a frost quake is not ruled out. **Not verified, not rejected.**
-- C025, Årjäng, 6 February 1875, and C026, Åmål, Tuesday 7 July 1874 at about 10:00: one source each. C026 may be the date of FENCAT's year-only row `SVW 1874 08 58.9 12.6 V`. Open. C028 (2026-10-13) widens C026: Swedish papers report a shock on Tuesday 7 July 1874 around 9–10 in the morning at Strömstad, Åmål and western Dalsland, and on Friday 14 August in Ödskölt parish, which the report calls "the fifth in these parts in July and August". FENCAT has one undated row for that area in 1874 (hour 08). Not yet read on page images. Open. C029, Söderhamn, 22 January 1875: one source, extreme cold that week. Open, weak.
+- C025, Årjäng, 6 February 1875, and C026, Åmål, Tuesday 7 July 1874 at about 10:00: one source each. C026 may be the date of FENCAT's year-only row `SVW 1874 08 58.9 12.6 V`. Open. C028 (2026-10-13) widens C026, and its 7 July shock is now F6: Swedish papers report a shock on Tuesday 7 July 1874 around 9–10 in the morning at Strömstad, Åmål and western Dalsland, and on Friday 14 August in Ödskölt parish, which the report calls "the fifth in these parts in July and August". FENCAT has one undated row for that area in 1874 (hour 08). Not yet read on page images. Open. C029, Söderhamn, 22 January 1875: one source, extreme cold that week. Open, weak.
 - C002, 1 January 1841 at about 23:00 (Arendal, Næs Jernverk and Mandal): two independent towns, but it happened in mid-winter, so a frost quake (cryoseism) has not been ruled out. Thomassen (1888) does not list it. The weather argues for a frost quake: the Kristiansand paper of 4 January 1841 reports eight days of hard frost, and the Stockholm daily series (Bolin Centre) stays between −3 and −7 °C from 25 December to 6 January. Swedish papers only reprint the Arendal report. **Not verified, not rejected.**
 - C003–C006, C008, C010, C011: one source each. Open. C008 (Drammen and Skoger, morning of 1 October 1849) at first looked like a Kristiania report. The page image shows the Kristiania paper credits Drammens Tidende, so it is one source.
 - C009, Nesna/Hemnes 1857: a correspondent's list of dated shocks. FENCAT has the Nesna swarm of 1819–1829 but nothing from 1857. There is one source, so it stays open.
