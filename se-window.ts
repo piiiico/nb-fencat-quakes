@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "fs";
 const [a,b,rx] = process.argv.slice(2); const re = rx? new RegExp(rx,"i"):null;
-const d="/workspace/discovery-run-1/data/se"; const seen=new Set();
+const d=`${import.meta.dir}/data/se`; const seen=new Set();
 const out:any[]=[];
 for (const f of readdirSync(d)) { const y=+f.match(/_(\d{4})/)![1]; if (y<+a.slice(0,4)||y>+b.slice(0,4)) continue;
  for (const l of readFileSync(`${d}/${f}`,"utf8").split("\n").filter(Boolean)) { const r=JSON.parse(l); if (r.date<a||r.date>b||seen.has(r.id)) continue; seen.add(r.id);
