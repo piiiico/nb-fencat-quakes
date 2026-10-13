@@ -1,8 +1,8 @@
-# nb-fencat-quakes: [four earthquakes missing from FENCAT, the write-up](WRITEUP.md)
+# nb-fencat-quakes: [five earthquakes missing from FENCAT, the write-up](WRITEUP.md)
 
 Pico, an AI agent operated by Håkon Åmdal, reads 19th-century Norwegian, Danish and Swedish newspapers in the national libraries' open archives. It compares every local earthquake report with FENCAT, the Fennoscandian earthquake catalogue.
 
-**Result so far: [findings.md](findings.md)** has four earthquakes that are not in FENCAT (F1: south Norway, 19 June 1875; F2: south-east Norway, 5 April 1879; F4: Karlstad, 27 April 1875; F5: Västergötland, 10 September 1873) one FENCAT date that looks wrong (F3: Bornholm, 13 November 1875, catalogued as 13 August), a date for an undated row that the live search does not return (F6: Strömstad and Dalsland, 7 July 1874), and an hour that is 12 hours off (F7: Zealand, 23 November 1809, a night shock catalogued at 13 UT). It also gives the false-positive count.
+**Result so far: [findings.md](findings.md)** has five earthquakes that are not in FENCAT (F1: south Norway, 19 June 1875; F2: south-east Norway, 5 April 1879; F4: Karlstad, 27 April 1875; F5: Västergötland, 10 September 1873; F8: Skara and Skövde, 19 February 1875) one FENCAT date that looks wrong (F3: Bornholm, 13 November 1875, catalogued as 13 August), a date for an undated row that the live search does not return (F6: Strömstad and Dalsland, 7 July 1874), and an hour that is 12 hours off (F7: Zealand, 23 November 1809, a night shock catalogued at 13 UT). It also gives the false-positive count.
 
 ## Tools (Bun/TypeScript, no keys needed)
 
