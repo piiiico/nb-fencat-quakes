@@ -5,7 +5,7 @@
 // Sources: NO data/h_*.jsonl (DH-lab conc), SE data/se/*.jsonl (KB snippets, 1863-1876), DK data/dk/YYYY.json (full segments).
 // Gazetteer: Wikidata settlements NO/SE/DK (data/wd-gazetteer.json, built from tmp/dr1/wd_*) + REGIONS below.
 // Floors: exits 1 if FENCAT <20,000 rows, gazetteer <5,000 names, or <1,000 located reports.
-// Controls (must hold or exit 1): LEH 18750813 flags, MUI 18410403 does not.
+// Controls (must hold or exit 1): LEH 18750813 flags, MUI 18410403 does not. Range missing either control row exits 2.
 import { readFileSync, readdirSync, existsSync } from "fs";
 const [FROM, TO, R] = [Number(process.argv[2] ?? 1800), Number(process.argv[3] ?? 1886), Number(process.argv[4] ?? 200)];
 const dir = import.meta.dir;
@@ -105,3 +105,5 @@ console.log("CONTROL", leh ? show(leh) : "LEH 18750813 not in range"); console.l
 for (const o of out.filter(o => o.flag)) { console.log(show(o)); if (process.env.SAMPLE) for (const x of o.sample) console.log("      ", x); }
 const bad = (leh && !leh.flag) || (mui && mui.flag);
 if (bad) { console.error("CONTROL FAILED"); process.exit(1); }
+// A range without both control rows tests neither arm: a clean list there is UNCONTROLLED, not clean (evaluator 10-13).
+if ((!leh || !mui) && !process.env.ALLOW_UNCONTROLLED) { console.error("CONTROL ABSENT: range must contain 1841 and 1875 (or set ALLOW_UNCONTROLLED=1 and say so)"); process.exit(2); }
