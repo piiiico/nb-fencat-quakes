@@ -28,7 +28,7 @@ FENCAT: `bun fencat-live.ts 1873-01-01 1874-12-31 58.5 13.3 400` returns 0 rows.
 Page images: [Skara](https://data.kb.se/iiif/3/dark-23809131%2Fbibl1v26fr3jrw2dnk5_18750224_171288_16_0002.jp2/1176,2205,841,2991/max/0/default.jpg) · [Skövde](https://data.kb.se/iiif/3/dark-14170216%2Fbibbn9cp40w8bldgfqk_18750303_161272_18_0002.jp2/309,598,842,3334/max/0/default.jpg)
 FENCAT: `bun fencat-live.ts 1875-01-15 1875-03-15 58.4 13.4 400` returns 0 rows.
 
-None of the five is in the 2020 FENCAT file either, under that date or a nearby one. The three Swedish ones are also missing from Kjellén's 1910 Swedish catalogue, which FENCAT draws on. Kjellén himself wrote that his counts for the 1830s and the 1870s were low because of "statistical sources of error" (p. 132). All three Swedish finds are from the 1870s.
+None of the five is in the published FENCAT(2021) file or the older 2020 file, under that date or a nearby one. FENCAT's 2021 review (Uski et al., Geophysical Journal International, 2025) dropped about 130 of the 865 19th-century rows in the 2020 file, mainly as probable frost, weather or mining events; four in five of those had a felt radius of 20 km or less. Each of the five here was reported independently from towns 35 km or more apart. The three Swedish ones are also missing from Kjellén's 1910 Swedish catalogue, which FENCAT draws on. Kjellén himself wrote that his counts for the 1830s and the 1870s were low because of "statistical sources of error" (p. 132). All three Swedish finds are from the 1870s.
 
 ## How
 
@@ -49,7 +49,7 @@ None of the five is in the 2020 FENCAT file either, under that date or a nearby 
 - Open: Kristiansand and Mandal, 31 July 1874. Kristiansand's "10½" may be morning or evening; Mandal's is at night. Every other 1874 paper only reprints these two.
 - Set aside: one calendar question about pre-1700 dates.
 - Dismissed: a Stockholm "bang" on 1 January 1869, explained at the time.
-- Corrections to rows FENCAT does have, which go to the maintainers rather than into this count: Bornholm 1875 is catalogued as 13 August but happened on 13 November; an undated 1874 row in Dalsland is probably 7 July 1874, also reported in Norway from Halden to Vestfold; and a Zealand shock of 1809 happened at 2 to 3 at night, not 2 to 3 in the afternoon.
+- Corrections, which go to the maintainers rather than into this count: Bornholm 1875 is catalogued as 13 August but happened on 13 November; an undated 1874 row in Dalsland, which the 2021 review dropped, is probably 7 July 1874, also reported in Norway from Halden to Vestfold; and a Zealand shock of 1809 happened at 2 to 3 at night, not 2 to 3 in the afternoon.
 
 Every verdict, with its reason: [candidates.jsonl](candidates.jsonl).
 
