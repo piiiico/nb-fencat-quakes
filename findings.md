@@ -143,7 +143,9 @@ Barometern (19 September) has the Falköping report under a «Falköping.» date
 
 **Other explanations we checked.** Thunder is the serious one. The week of 8–14 September 1873 was stormy in western Sweden (Falkenberg reports westerly gales with squalls and thunder), and the Sandhem report says the shock came «i förening med åska», together with thunder. We count Sandhem as the weakest of the three. Two things argue against a thunderclap. The Lidköping and Falköping informants both describe a ground shock, and neither mentions a storm. And a single thunderclap is heard over 15–25 km, while the three places are about 60 km apart and give the same evening hour. A frost quake is ruled out (September). We found no blasting or explosion in the reports.
 
-**What we did not check.** The Swedish historical catalogues FENCAT draws on, in the original. Any weather record from Skaraborg for the evening of 10 September.
+**What we did not check.** The Swedish historical catalogues FENCAT draws on, in the original.
+
+**Weather at Skara (added 2026-10-14).** FENCAT's 2021 review drops warm-month rows that may be thunderstorms (Uski et al. 2025, *GJI* 242, ggaf242, section 7), so this is the test the maintainers will apply. SMHI Skara (station 83270, corrected archive): 10 September 1873 read 11.2 / 11.6 / 11.0 °C at 07 / 13 / 20 h, with 3.3 mm of rain from 07 h on the 10th to 07 h on the 11th (11.6 mm the day before). A cool, wet day in a wet spell (Skara: 21 mm over 9–11 September), with no warm afternoon of the kind that feeds a local thunderstorm. A front with squalls and thunder in the evening is still possible. The weather does not decide it, and Sandhem stays the weakest of the three. Query: `opendata-download-metobs.smhi.se/api/version/1.0/parameter/{1,5}/station/83270/period/corrected-archive/data.csv`.
 
 **Replicate it.**
 - Lidköping: https://data.kb.se/iiif/3/dark-10770515%2Fbib22683391_18730913_154764_73_0002.jp2/1779,2300,733,900/max/0/default.jpg
